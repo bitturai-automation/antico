@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Contact | Antico Flow System</title>
+<meta name="description" content="Request a quote or talk to the Antico engineering team about your corrosion-resistant flow system requirement."/>
+<meta property="og:title" content="Contact | Antico Flow System"/>
+<meta property="og:description" content="Request a quote or talk to the Antico engineering team about your corrosion-resistant flow system requirement."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"/>
+
+<style id="contact-premium-body-redesign">
+
+:root{
+  --cp-ink:#08111f;
+  --cp-navy:#0a1423;
+  --cp-blue:#0873dc;
+  --cp-sky:#5bbcff;
+  --cp-paper:#f5f7f9;
+  --cp-muted:#707b88;
+  --cp-line:rgba(8,17,31,.10);
+}
+html{scroll-behavior:smooth}
+body{background:var(--cp-paper);color:var(--cp-ink)}
+.container{width:min(1220px,calc(100% - 64px));margin:auto}
+
+
+
+/* CONTACT SECTION */
+.section-tight.section-light{
+  padding:110px 0 125px!important;
+  background:
+    radial-gradient(circle at 8% 18%,rgba(8,115,220,.055),transparent 26%),
+    var(--cp-paper)!important;
+}
+.contact-grid{
+  display:grid!important;
+  grid-template-columns:.72fr 1.28fr!important;
+  gap:70px!important;
+  align-items:start!important;
+}
+
+/* LEFT SIDE */
+.contact-grid>div:first-child{
+  position:relative;
+  padding-top:6px;
+}
+.contact-grid>div:first-child:before{
+  content:"";
+  position:absolute;
+  left:-28px;
+  top:0;
+  width:1px;
+  height:100%;
+  background:linear-gradient(to bottom,var(--cp-blue),rgba(8,115,220,0));
+  opacity:.45;
+}
+.contact-info-card{
+  display:flex!important;
+  align-items:flex-start!important;
+  gap:20px!important;
+  padding:25px 0!important;
+  margin:0!important;
+  border-bottom:1px solid var(--cp-line)!important;
+  background:transparent!important;
+  transition:transform .35s ease,padding-left .35s ease!important;
+}
+.contact-info-card:first-child{border-top:1px solid var(--cp-line)!important}
+.contact-info-card:hover{
+  transform:translateX(7px);
+  padding-left:8px!important;
+}
+.contact-info-card .ic{
+  flex:0 0 48px;
+  width:48px!important;height:48px!important;
+  padding:13px;
+  color:var(--cp-blue)!important;
+  background:#fff;
+  border:1px solid rgba(8,115,220,.13);
+  box-shadow:0 12px 30px rgba(8,17,31,.06);
+}
+.contact-info-card h4{
+  margin:1px 0 7px!important;
+  font-family:var(--font-display)!important;
+  font-size:22px!important;
+  letter-spacing:-.025em;
+}
+.contact-info-card a{
+  color:#4d5967!important;
+  font-size:12px!important;
+  transition:color .25s ease;
+}
+.contact-info-card a:hover{color:var(--cp-blue)!important}
+.contact-info-card p{
+  margin:0!important;
+  color:#788391!important;
+  font-size:12px!important;
+  line-height:1.7!important;
+}
+
+/* FORM */
+.form-card{
+  position:relative;
+  background:#fff!important;
+  border:1px solid var(--cp-line)!important;
+  padding:42px!important;
+  box-shadow:0 25px 70px rgba(8,17,31,.08)!important;
+}
+.form-card:before{
+  content:"ENGINEERING ENQUIRY";
+  position:absolute;
+  top:-11px;
+  left:28px;
+  padding:5px 9px;
+  background:var(--cp-blue);
+  color:#fff;
+  font:8px var(--font-mono);
+  letter-spacing:.13em;
+}
+.form-row{
+  display:grid!important;
+  grid-template-columns:1fr 1fr!important;
+  gap:20px!important;
+}
+.field{margin-bottom:20px!important}
+.field label{
+  display:block;
+  margin-bottom:7px!important;
+  color:var(--navy)!important;
+  font-size:12.5px!important;
+  font-weight:600;
+  font-family:var(--font-body)!important;
+  text-transform:none;
+  letter-spacing:normal!important;
+}
+.field input,.field select,.field textarea{
+  width:100%!important;
+  border:1px solid #dce1e7!important;
+  background:#fbfcfd!important;
+  color:#152235!important;
+  padding:12px 14px!important;
+  border-radius:var(--radius-sm)!important;
+  font-family:var(--font-body)!important;
+  font-size:14px!important;
+  outline:none;
+  transition:border-color .25s ease,box-shadow .25s ease,background .25s ease;
+}
+.field textarea{min-height:145px!important;resize:vertical!important}
+.field input:focus,.field select:focus,.field textarea:focus{
+  border-color:var(--cp-blue)!important;
+  background:#fff!important;
+  box-shadow:0 0 0 3px rgba(8,115,220,.08)!important;
+}
+.upload-box{
+  min-height:92px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  margin:0 0 20px!important;
+  border:1px dashed #b9c3cf!important;
+  background:#f8fafc!important;
+  color:#687482!important;
+  text-align:center;
+  font-family:var(--font-body)!important;
+  font-size:13px!important;
+  transition:.3s ease;
+}
+.upload-box:hover{
+  border-color:var(--cp-blue)!important;
+  background:#f1f7fc!important;
+  color:var(--cp-blue)!important;
+}
+.upload-box span{
+  color:#9aa4af!important;
+  font-family:var(--font-body)!important;
+}
+.form-card .btn-primary{
+  min-height:52px;
+  border:0!important;
+  box-shadow:0 12px 30px rgba(8,115,220,.20);
+  transition:transform .3s ease,box-shadow .3s ease;
+}
+.form-card .btn-primary:hover{
+  transform:translateY(-3px);
+  box-shadow:0 18px 40px rgba(8,115,220,.28);
+}
+
+/* SUCCESS */
+.success-box{
+  padding:60px 30px!important;
+  text-align:center;
+  background:#f6fbff!important;
+  border:1px solid rgba(8,115,220,.12)!important;
+}
+.success-box .check{
+  width:56px!important;height:56px!important;
+  display:flex!important;align-items:center;justify-content:center;
+  margin:0 auto 20px!important;
+  border-radius:50%!important;
+  background:var(--cp-blue)!important;
+  color:#fff!important;
+  box-shadow:0 12px 30px rgba(8,115,220,.22);
+}
+
+/* FOOTER */
+footer{
+  background:#07101d!important;
+  border-top:1px solid rgba(255,255,255,.08);
+}
+footer .footer-tag{
+  color:rgba(255,255,255,.42)!important;
+  line-height:1.75!important;
+}
+.footer-col h5{
+  color:#fff!important;
+  font:9px var(--font-mono)!important;
+  letter-spacing:.1em!important;
+  text-transform:uppercase;
+}
+.footer-col a{
+  color:rgba(255,255,255,.45)!important;
+  transition:color .25s ease;
+}
+.footer-col a:hover{color:var(--cp-sky)!important}
+.footer-bottom{
+  border-top:1px solid rgba(255,255,255,.08)!important;
+  color:rgba(255,255,255,.3)!important;
+}
+
+/* REVEAL MOTION */
+.contact-grid .reveal{
+  transition:opacity .8s ease,transform .8s cubic-bezier(.22,1,.36,1)!important;
+}
+.contact-grid .reveal:not(.in){
+  opacity:0;
+  transform:translateY(22px);
+}
+.contact-grid .reveal.in{
+  opacity:1;
+  transform:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .container{width:calc(100% - 40px)}
+  .contact-grid{grid-template-columns:1fr!important;gap:45px!important}
+  .contact-grid>div:first-child:before{display:none}
+  .form-card{padding:32px!important}
+}
+@media(max-width:600px){
+  .section-tight.section-light{padding:72px 0 80px!important}
+  .container{width:calc(100% - 30px)}
+  .form-row{grid-template-columns:1fr!important;gap:0!important}
+  .form-card{padding:28px 20px!important}
+  .contact-info-card{padding:20px 0!important}
+}
+@media(prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,*:before,*:after{transition:none!important;animation:none!important}
+}
+
+</style>
+</head>
+<body class="page-fade-init dark-hero">
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+    <div class="nav-links">
+      <div class="nav-item nav-item-mega"><a href="products.html" class="nav-mega-trigger">Products<svg class="chev" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="mega-menu"><div class="mega-inner"><div class="mega-sidebar"><button type="button" class="mega-cat active" data-panel="pipes-fittings"><span>Pipes &amp; Fittings</span><em>30</em></button><button type="button" class="mega-cat" data-panel="valves"><span>Valves</span><em>7</em></button><button type="button" class="mega-cat" data-panel="bellows-special"><span>Bellows, SFIs &amp; Special</span><em>6</em></button><a href="products.html" class="mega-viewall">View All Products →</a></div><div class="mega-panels"><div class="mega-panel active" data-panel="pipes-fittings"><div class="mega-groups"><div class="mega-group"><h4>Spools, Elbows &amp; Reducers</h4><a href="products/ptfe-lined-spool-pipe.html">PTFE Lined Spool Pipe</a><a href="products/ptfe-lined-jacketed-spool-pipe.html">PTFE Lined Jacketed Spool Pipe</a><a href="products/ptfe-lined-elbow-90.html">PTFE Lined Elbow 90°</a><a href="products/ptfe-lined-elbow-45.html">PTFE Lined Elbow 45°</a><a href="products/ptfe-lined-concentric-reducer.html">PTFE Lined Concentric Reducer</a><a href="products/ptfe-lined-eccentric-reducer.html">PTFE Lined Eccentric Reducer</a><a href="products/ptfe-lined-reducing-flange.html">PTFE Lined Reducing Flange</a><a href="products/ptfe-lined-blind-flange.html">PTFE Lined Blind Flange</a><a href="products/ptfe-lined-full-face-adapter-flange.html">PTFE Lined Full Face Adapter Flange</a><a href="products/ptfe-lined-spectacle-blind.html">PTFE Lined Spectacle Blind</a></div><div class="mega-group"><h4>Tees &amp; Crosses</h4><a href="products/ptfe-lined-equal-tee.html">PTFE Lined Equal Tee</a><a href="products/ptfe-lined-unequal-tee.html">PTFE Lined Unequal Tee</a><a href="products/ptfe-lined-instrument-tee.html">PTFE Lined Instrument Tee</a><a href="products/ptfe-lined-unequal-lateral-tee.html">PTFE Lined Unequal Lateral Tee</a><a href="products/ptfe-lined-equal-lateral-tee.html">PTFE Lined Equal Lateral Tee</a><a href="products/ptfe-lined-equal-cross.html">PTFE Lined Equal Cross</a><a href="products/ptfe-lined-unequal-cross.html">PTFE Lined Unequal Cross</a></div><div class="mega-group"><h4>Dip Pipes &amp; Entry</h4><a href="products/ptfe-lined-dip-pipe.html">PTFE Lined Dip Pipe</a><a href="products/ptfe-lined-closed-dip-pipe.html">PTFE Lined Closed Dip Pipe</a><a href="products/ptfe-lined-curved-dip-pipe.html">PTFE Lined Curved Dip Pipe</a><a href="products/ptfe-lined-dip-pipe-with-sparger.html">PTFE Lined Dip Pipe with Sparger</a><a href="products/ptfe-lined-dip-leg.html">PTFE Lined Dip Leg</a><a href="products/ptfe-entry-pipe.html">PTFE Entry Pipe</a></div><div class="mega-group"><h4>Spacers, Strainers &amp; Hoses</h4><a href="products/ptfe-solid-tapered-spacer.html">PTFE Solid &amp; Tapered Spacer</a><a href="products/ptfe-lined-spacer.html">PTFE Lined Spacer</a><a href="products/ptfe-lined-distance-piece.html">PTFE Lined Distance Piece</a><a href="products/ptfe-lined-y-type-strainer.html">PTFE Lined Y-Type Strainer</a><a href="products/ptfe-lined-hose-nipple.html">PTFE Lined Hose Nipple</a><a href="products/ptfe-lined-hose-pipe.html">PTFE Lined Hose Pipe</a><a href="products/ptfe-lined-header.html">PTFE Lined Header</a></div></div></div><div class="mega-panel" data-panel="valves"><div class="mega-groups"><div class="mega-group"><h4>Valves</h4><a href="products/ptfe-lined-ball-valve.html">PTFE Lined Ball Valve</a><a href="products/ptfe-lined-butterfly-valve.html">PTFE Lined Butterfly Valve</a><a href="products/ptfe-lined-non-return-valve.html">PTFE Lined Non-Return Valve</a><a href="products/ptfe-lined-plug-valve.html">PTFE Lined Plug Valve</a><a href="products/ptfe-lined-diaphragm-valve.html">PTFE Lined Diaphragm Valve</a><a href="products/ptfe-lined-flush-bottom-valve.html">PTFE Lined Flush Bottom Valve</a><a href="products/ptfe-lined-swing-check-valve.html">PTFE Lined Swing Check Valve</a></div></div></div><div class="mega-panel" data-panel="bellows-special"><div class="mega-groups"><div class="mega-group"><h4>Bellows, SFIs &amp; Special Items</h4><a href="products/ptfe-moulded-high-pressure-bellow.html">PTFE Moulded High Pressure Bellow</a><a href="products/ptfe-machined-high-pressure-bellow.html">PTFE Machined High Pressure Bellow</a><a href="products/ptfe-lined-double-window-sfi.html">PTFE Lined Double Window SFI</a><a href="products/ptfe-lined-full-view-sfi.html">PTFE Lined Full View SFI (Tubular)</a><a href="products/ptfe-gasket-envelope-gasket.html">PTFE Gasket &amp; Envelope Gasket</a><a href="products/ptfe-t-bush-glr-nozzle.html">PTFE T-Bush for GLR Nozzle</a></div></div></div></div><div class="mega-promo">
+<span class="mega-promo-tag">Complete Catalog</span>
+<h4>43 Precision-Lined<br/>Flow Components</h4>
+<p>PTFE / PFA / FEP lined pipes, fittings, valves, bellows &amp; sight flow indicators — engineered to ASTM F1545.</p>
+<a href="products.html" class="btn btn-primary btn-sm">Browse All Products</a>
+<a href="contact.html" class="mega-promo-link">Request a Quote →</a>
+</div></div></div></div>
+<div class="nav-item nav-item-mega"><a href="industries.html" class="nav-mega-trigger">Industries<svg class="chev" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="mega-menu"><div class="mega-inner mega-inner-industries"><div class="mega-industry-list"><a href="industries.html#chemical-processing">Chemical Processing</a><a href="industries.html#pharmaceutical">Pharmaceutical</a><a href="industries.html#petrochemical">Petrochemical</a><a href="industries.html#fertilizer">Fertilizer</a><a href="industries.html#specialty-chemicals">Specialty Chemicals</a><a href="industries.html#mining">Mining</a><a href="industries.html#power-plants">Power Plants</a><a href="industries.html#oil-gas">Oil & Gas</a></div><div class="mega-promo"><span class="mega-promo-tag">8 Sectors Served</span><h4>Engineered Flow Solutions<br/>By Industry</h4><p>From chemical processing to oil &amp; gas — fluoropolymer-lined components matched to your process duty.</p><a href="industries.html" class="btn btn-primary btn-sm">Explore Industries</a><a href="contact.html" class="mega-promo-link">Request a Quote →</a></div></div></div></div>
+<a href="about.html">About</a>
+<a href="manufacturing.html">Manufacturing</a>
+<a href="quality.html">Quality</a>
+    </div>
+    <div class="nav-right">
+      <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search products" aria-expanded="false" aria-controls="navSearchPanel">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary nav-cta btn-sm">Request a Quote</a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-search-panel" id="navSearchPanel">
+    <form class="nav-search-form" id="navSearchForm">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="navSearchInput" placeholder="Search products… (e.g. PTFE Lined Ball Valve)" aria-label="Search products"/>
+      <button type="submit" class="btn btn-primary btn-sm">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+    <button class="close-btn" aria-label="Close menu">&times;</button>
+  </div>
+  <form class="mobile-search-wrap" id="mobileSearchForm">
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <input type="text" id="mobileSearchInput" placeholder="Search products…" aria-label="Search products"/>
+  </form>
+  <div class="mobile-nav-links">
+    <a href="products.html">Products</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About</a>
+<a href="manufacturing.html">Manufacturing</a>
+<a href="quality.html">Quality</a>
+  </div>
+  <div class="mobile-nav-foot">
+    <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  </div>
+</div>
+
+<section class="page-banner" style="background-image:url('assets/page-banner-bg.jpg')">
+  <div class="container">
+    <span class="eyebrow">Contact</span>
+    <h1>Contact Us</h1>
+    <p>Send us your fitting list, drawing, or process requirement and our engineering team will get back to you within 24 hours.</p>
+  </div>
+</section>
+
+<section class="section-tight section-light">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="reveal">
+        <div class="contact-info-card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.9.6 2.8a2 2 0 0 1-.5 2.1L7.9 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.8.6a2 2 0 0 1 1.7 2.1z" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div><h4>Call Us</h4><a href="tel:+919601176639">+91 96011 76639</a></div>
+        </div>
+        <div class="contact-info-card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M4 4h16v16H4z" stroke="currentColor" stroke-width="1.5"/><path d="m4 6 8 7 8-7" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div><h4>Email Us</h4><a href="mailto:sales@anticoflow.com">sales@anticoflow.com</a></div>
+        </div>
+        <div class="contact-info-card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" stroke="currentColor" stroke-width="1.5"/><circle cx="12" cy="9.5" r="2.3" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div><h4>Location</h4><p>Sardar Industrial Estate, Ajwa Road,<br/>Vadodara, Gujarat, India</p></div>
+        </div>
+        <div class="contact-info-card">
+          <svg class="ic" viewBox="0 0 24 24" fill="none"><path d="M4 20h16M4 20V10l8-6 8 6v10M9 20v-6h6v6" stroke="currentColor" stroke-width="1.5"/></svg>
+          <div><h4>Request a Quote</h4><p>Use the form to send your fitting list or drawing directly to our engineering team.</p></div>
+        </div>
+      </div>
+
+      <div class="form-card reveal">
+        <form id="rfq-form">
+          <div class="form-row">
+            <div class="field"><label for="f-name">Full Name</label><input id="f-name" type="text" required/></div>
+            <div class="field"><label for="f-company">Company Name</label><input id="f-company" type="text" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" required/></div>
+            <div class="field"><label for="f-phone">Phone</label><input id="f-phone" type="tel" required/></div>
+          </div>
+          <div class="form-row">
+            <div class="field"><label for="f-country">Country</label><input id="f-country" type="text"/></div>
+            <div class="field"><label for="f-qty">Quantity</label><input id="f-qty" type="text"/></div>
+          </div>
+          <div class="field" style="margin-bottom:16px;">
+            <label for="f-product">Product / Requirement</label>
+            <select id="f-product">
+              <option value="">Select a product (optional)</option>
+              <option value="ptfe-lined-spool-pipe">PTFE Lined Spool Pipe</option><option value="ptfe-lined-jacketed-spool-pipe">PTFE Lined Jacketed Spool Pipe</option><option value="ptfe-lined-elbow-90">PTFE Lined Elbow 90°</option><option value="ptfe-lined-elbow-45">PTFE Lined Elbow 45°</option><option value="ptfe-lined-concentric-reducer">PTFE Lined Concentric Reducer</option><option value="ptfe-lined-eccentric-reducer">PTFE Lined Eccentric Reducer</option><option value="ptfe-lined-reducing-flange">PTFE Lined Reducing Flange</option><option value="ptfe-lined-blind-flange">PTFE Lined Blind Flange</option><option value="ptfe-lined-equal-tee">PTFE Lined Equal Tee</option><option value="ptfe-lined-unequal-tee">PTFE Lined Unequal Tee</option><option value="ptfe-lined-instrument-tee">PTFE Lined Instrument Tee</option><option value="ptfe-lined-unequal-lateral-tee">PTFE Lined Unequal Lateral Tee</option><option value="ptfe-lined-equal-lateral-tee">PTFE Lined Equal Lateral Tee</option><option value="ptfe-lined-equal-cross">PTFE Lined Equal Cross</option><option value="ptfe-lined-unequal-cross">PTFE Lined Unequal Cross</option><option value="ptfe-moulded-high-pressure-bellow">PTFE Moulded High Pressure Bellow</option><option value="ptfe-machined-high-pressure-bellow">PTFE Machined High Pressure Bellow</option><option value="ptfe-lined-dip-pipe">PTFE Lined Dip Pipe</option><option value="ptfe-lined-closed-dip-pipe">PTFE Lined Closed Dip Pipe</option><option value="ptfe-lined-curved-dip-pipe">PTFE Lined Curved Dip Pipe</option><option value="ptfe-lined-dip-pipe-with-sparger">PTFE Lined Dip Pipe with Sparger</option><option value="ptfe-lined-dip-leg">PTFE Lined Dip Leg</option><option value="ptfe-entry-pipe">PTFE Entry Pipe</option><option value="ptfe-solid-tapered-spacer">PTFE Solid & Tapered Spacer</option><option value="ptfe-lined-spacer">PTFE Lined Spacer</option><option value="ptfe-lined-distance-piece">PTFE Lined Distance Piece</option><option value="ptfe-lined-full-face-adapter-flange">PTFE Lined Full Face Adapter Flange</option><option value="ptfe-lined-spectacle-blind">PTFE Lined Spectacle Blind</option><option value="ptfe-lined-y-type-strainer">PTFE Lined Y-Type Strainer</option><option value="ptfe-lined-hose-nipple">PTFE Lined Hose Nipple</option><option value="ptfe-lined-hose-pipe">PTFE Lined Hose Pipe</option><option value="ptfe-lined-header">PTFE Lined Header</option><option value="ptfe-gasket-envelope-gasket">PTFE Gasket & Envelope Gasket</option><option value="ptfe-t-bush-glr-nozzle">PTFE T-Bush for GLR Nozzle</option><option value="ptfe-lined-ball-valve">PTFE Lined Ball Valve</option><option value="ptfe-lined-butterfly-valve">PTFE Lined Butterfly Valve</option><option value="ptfe-lined-non-return-valve">PTFE Lined Non-Return Valve</option><option value="ptfe-lined-plug-valve">PTFE Lined Plug Valve</option><option value="ptfe-lined-diaphragm-valve">PTFE Lined Diaphragm Valve</option><option value="ptfe-lined-flush-bottom-valve">PTFE Lined Flush Bottom Valve</option><option value="ptfe-lined-swing-check-valve">PTFE Lined Swing Check Valve</option><option value="ptfe-lined-double-window-sfi">PTFE Lined Double Window SFI</option><option value="ptfe-lined-full-view-sfi">PTFE Lined Full View SFI (Tubular)</option>
+            </select>
+          </div>
+          <div class="field" style="margin-bottom:16px;">
+            <label for="f-message">Message</label>
+            <textarea id="f-message" placeholder="Tell us about your process, sizes and any drawing references…"></textarea>
+          </div>
+          <div class="upload-box">Upload Drawing / Technical Requirement <span style="display:block;font-size:11px;margin-top:4px;">(PDF, DWG, JPG — optional)</span></div>
+          <button type="submit" class="btn btn-primary" style="width:100%;">Send Inquiry</button>
+        </form>
+        <div class="success-box" id="form-success">
+          <div class="check">&check;</div>
+          <h3 style="font-size:20px;">Inquiry received.</h3>
+          <p style="color:var(--muted);margin-top:10px;">Thank you — our engineering team will get back to you shortly. For anything urgent, call +91 96011 76639.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+        <p class="footer-tag">Engineered for corrosion. Trusted for performance. Fluoropolymer-lined flow systems for demanding process industries.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="products.html?category=pipes-fittings">Pipes & Fittings</a>
+<a href="products.html?category=valves">Valves</a>
+<a href="products.html?category=bellows">Expansion Bellows</a>
+<a href="products.html?category=sight-flow-indicators">Sight Flow Indicators</a>
+<a href="products.html?category=special-products">Special Design Products</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="manufacturing.html">Manufacturing</a>
+        <a href="quality.html">Quality</a>
+        <a href="industries.html">Industries</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get In Touch</h5>
+        <a href="tel:+919601176639">+91 96011 76639</a>
+        <a href="mailto:sales@anticoflow.com">sales@anticoflow.com</a>
+        <a href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Antico Flow System. All rights reserved.</span>
+      <span>Privacy Policy &nbsp;·&nbsp; Terms &amp; Conditions</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+
+<script id="contact-premium-motion">
+(function(){
+  var items=document.querySelectorAll('.contact-grid .reveal');
+  if(!items.length)return;
+  if(!('IntersectionObserver' in window)){
+    items.forEach(function(el){el.classList.add('in')});
+    return;
+  }
+  var io=new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add('in');
+        io.unobserve(entry.target);
+      }
+    });
+  },{threshold:.08,rootMargin:'0px 0px -25px 0px'});
+  items.forEach(function(el){io.observe(el)});
+})();
+</script>
+
+</body>
+</html>

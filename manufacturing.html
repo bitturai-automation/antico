@@ -1,0 +1,712 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>Manufacturing | Antico Flow System</title>
+<meta name="description" content="Inside Antico's fluoropolymer lining process — CAD design, machining, liner extrusion, fabrication and quality testing, all under one roof."/>
+<meta property="og:title" content="Manufacturing | Antico Flow System"/>
+<meta property="og:description" content="Inside Antico's fluoropolymer lining process — CAD design, machining, liner extrusion, fabrication and quality testing, all under one roof."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"/>
+
+
+
+
+
+<style>
+/* =========================================================
+   ANTICO MANUFACTURING — PREMIUM UI SYSTEM
+   Hero section intentionally untouched.
+   One typography system. Minimal labels. Editorial hierarchy.
+   ========================================================= */
+
+.mf-facility,
+.mf-process,
+.mf-standards{background:#f6f7f8;color:#0b1220}
+.mf-facility{padding:104px 0 110px}
+.mf-process{padding:110px 0 120px}
+.mf-standards{padding:105px 0}
+
+.mf-facility-head,
+.mf-process-head,
+.mf-engineering-head{
+  display:grid;
+  grid-template-columns:1fr .72fr;
+  gap:90px;
+  align-items:end;
+}
+.mf-facility-head{margin-bottom:58px}
+.mf-facility-head h2,
+.mf-process-head h2,
+.mf-engineering-head h2,
+.mf-standards-grid h2{
+  margin:10px 0 0;
+  font-family:var(--font-display);
+  font-weight:600;
+  letter-spacing:-.005em;
+  line-height:1.08;
+  color:#0b1220;
+}
+.mf-facility-head h2{font-size:clamp(28px,4vw,44px)}
+.mf-process-head h2{font-size:clamp(28px,4vw,44px)}
+.mf-engineering-head h2{font-size:clamp(28px,4vw,44px);color:#fff}
+.mf-facility-head h2 em,
+.mf-process-head h2 em,
+.mf-engineering-head h2 em,
+.mf-standards-grid h2 em{
+  color:#0263CC;font-style:normal;
+}
+.mf-facility-intro,
+.mf-process-head>p,
+.mf-engineering-head>p{
+  color:#687181;
+  font-family:var(--font-body);
+  font-size:14px;
+  line-height:1.75;
+  max-width:470px;
+}
+.mf-facility-intro{border-left:2px solid #0263CC;padding-left:25px}
+.mf-facility-intro p{margin:0}
+
+/* Facility */
+.mf-factory{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+  background:#fff;
+  border:1px solid rgba(11,18,32,.09);
+  box-shadow:0 22px 65px rgba(11,18,32,.075);
+}
+.mf-factory-visual{position:relative;min-height:510px;overflow:hidden}
+.mf-factory-visual img{
+  width:100%;height:100%;object-fit:cover;
+  filter:saturate(.72) contrast(1.02);
+  transition:transform 1s cubic-bezier(.22,1,.36,1),filter .6s ease;
+}
+.mf-factory:hover img{transform:scale(1.025);filter:saturate(.84) contrast(1.03)}
+.mf-image-scan{
+  position:absolute;left:0;right:0;top:0;height:1px;
+  background:#61baff;box-shadow:0 0 14px rgba(54,168,255,.7);
+  animation:mfScan 5s ease-in-out infinite;
+}
+.mf-image-meta{
+  position:absolute;left:22px;bottom:22px;
+  padding:11px 14px;
+  background:rgba(8,14,24,.82);
+  border-left:2px solid #36a8ff;
+  color:#fff;
+}
+.mf-image-meta span,
+.mf-image-meta b{
+  display:block;font-family:var(--font-mono);font-size:8px;letter-spacing:.1em;
+}
+.mf-image-meta span{color:#68bdff}
+.mf-image-meta b{margin-top:5px;font-weight:500}
+.mf-image-corner{
+  position:absolute;right:20px;top:18px;
+  color:rgba(255,255,255,.6);
+  font-family:var(--font-mono);font-size:9px;letter-spacing:.12em;
+}
+.mf-factory-panel{padding:57px 58px}
+.mf-factory-panel h3{
+  font-family:var(--font-display);
+  font-size:clamp(30px,3.2vw,43px);
+  line-height:1.02;
+  letter-spacing:-.025em;
+  margin:10px 0 20px;
+}
+.mf-factory-panel p{
+  color:#687181;font-family:var(--font-body);
+  font-size:14px;line-height:1.75;
+}
+.mf-capabilities{
+  display:grid;grid-template-columns:1fr 1fr;
+  margin-top:30px;border-top:1px solid rgba(11,18,32,.1);
+}
+.mf-capabilities div{
+  padding:12px 0;border-bottom:1px solid rgba(11,18,32,.08);
+  color:#293445;font-family:var(--font-mono);
+  font-size:9px;letter-spacing:.04em;
+}
+.mf-capabilities span{color:#0263CC;margin-right:9px}
+
+/* Stats — no numbered labels */
+.mf-stats{
+  position:relative;overflow:hidden;
+  padding:82px 0;
+  background:#0b1220;color:#fff;
+}
+.mf-stats:before{
+  content:"";position:absolute;inset:0;pointer-events:none;
+  background-image:
+    linear-gradient(rgba(255,255,255,.03) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.03) 1px,transparent 1px);
+  background-size:60px 60px;
+  mask-image:linear-gradient(90deg,#000,transparent);
+}
+.mf-orbit{
+  position:absolute;border:1px solid rgba(54,168,255,.11);
+  border-radius:50%;pointer-events:none;
+}
+.mf-orbit-a{width:600px;height:600px;right:-300px;top:-300px;animation:mfSpin 24s linear infinite}
+.mf-orbit-b{width:420px;height:420px;right:-210px;top:-210px;box-shadow:0 0 0 45px rgba(54,168,255,.018);animation:mfSpin 17s linear infinite reverse}
+.mf-stats-grid{
+  position:relative;display:grid;grid-template-columns:repeat(4,1fr);
+  border-top:1px solid rgba(255,255,255,.11);
+  border-bottom:1px solid rgba(255,255,255,.11);
+}
+.mf-stat{position:relative;padding:34px 28px;border-right:1px solid rgba(255,255,255,.11)}
+.mf-stat:first-child{padding-left:0}
+.mf-stat:last-child{border-right:0}
+.mf-stat strong{
+  display:block;font-family:var(--font-display);
+  font-size:clamp(26px,3.4vw,38px);
+  font-weight:800;letter-spacing:-.02em;line-height:1;color:#fff;
+}
+.mf-stat span{
+  display:block;margin-top:12px;max-width:190px;
+  color:rgba(255,255,255,.47);
+  font-family:var(--font-mono);
+  font-size:9px;line-height:1.55;
+  letter-spacing:.07em;text-transform:uppercase;
+}
+.mf-stat em{
+  position:absolute;right:20px;top:18px;
+  color:rgba(255,255,255,.15);
+  font-family:var(--font-mono);font-size:8px;font-style:normal;
+}
+
+/* Process */
+.mf-process-head{margin-bottom:60px}
+.mf-timeline{position:relative;border-top:1px solid rgba(11,18,32,.1)}
+.mf-progress{
+  position:absolute;left:82px;top:0;bottom:0;width:1px;
+  background:linear-gradient(#0263CC,rgba(2,99,204,.08));
+}
+.mf-stage{
+  position:relative;
+  display:grid;
+  grid-template-columns:58px 48px 1fr 35px;
+  gap:25px;
+  align-items:center;
+  padding:27px 10px;
+  border-bottom:1px solid rgba(11,18,32,.09);
+  transition:background .35s ease,transform .4s cubic-bezier(.22,1,.36,1);
+}
+.mf-stage:hover{background:#fff;transform:translateX(6px)}
+.mf-stage-index{font-family:var(--font-mono);font-size:9px;color:#0263CC}
+.mf-stage-node{
+  position:relative;width:17px;height:17px;
+  border:1px solid #0263CC;border-radius:50%;
+  background:#f6f7f8;z-index:1;
+}
+.mf-stage-node span{
+  position:absolute;width:5px;height:5px;left:5px;top:5px;
+  border-radius:50%;background:#0263CC;
+  transition:.35s ease;
+}
+.mf-stage:hover .mf-stage-node{box-shadow:0 0 0 7px rgba(2,99,204,.08)}
+.mf-stage-content>span{
+  font-family:var(--font-mono);font-size:8px;
+  letter-spacing:.11em;color:#0263CC;
+}
+.mf-stage-content h3{
+  margin:6px 0 7px;
+  font-family:var(--font-display);
+  font-size:21px;font-weight:600;letter-spacing:-.01em;
+}
+.mf-stage-content p{margin:0;max-width:730px;color:#687181;font-size:13px;line-height:1.65}
+.mf-stage-mark{color:#a5aeba;transition:.3s ease}
+.mf-stage:hover .mf-stage-mark{color:#0263CC;transform:translate(4px,-4px)}
+
+/* Engineering */
+.mf-engineering{
+  position:relative;overflow:hidden;
+  padding:108px 0;
+  background:#0b1220;color:#fff;
+}
+.mf-engineering:before{
+  content:"";position:absolute;inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.025) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.025) 1px,transparent 1px);
+  background-size:55px 55px;
+  mask-image:linear-gradient(90deg,#000,transparent);
+}
+.mf-engineering:after{
+  content:"";position:absolute;width:620px;height:620px;
+  right:-300px;top:-300px;border:1px solid rgba(54,168,255,.1);
+  border-radius:50%;box-shadow:0 0 0 75px rgba(54,168,255,.018);
+}
+.mf-engineering-head{position:relative;z-index:1;margin-bottom:55px}
+.mf-engineering-head .eyebrow{color:#61baff}
+.mf-detail-grid{
+  position:relative;z-index:1;
+  display:grid;grid-template-columns:1fr 1fr;
+  gap:1px;background:rgba(255,255,255,.1);
+}
+.mf-detail{
+  padding:44px;background:#0e1928;min-height:365px;
+  transition:transform .4s ease,background .35s ease,box-shadow .4s ease;
+}
+.mf-detail:hover{background:#122238;transform:translateY(-6px);box-shadow:0 25px 60px rgba(0,0,0,.24)}
+.mf-detail-top{display:flex;justify-content:space-between;font-family:var(--font-mono);font-size:8px;letter-spacing:.1em;color:rgba(255,255,255,.28)}
+.mf-detail-top b{color:#61baff;font-weight:500}
+.mf-detail-icon{
+  width:52px;height:52px;margin-top:30px;
+  border:1px solid rgba(54,168,255,.25);
+  display:flex;align-items:center;justify-content:center;color:#61baff;
+}
+.mf-detail-icon svg{width:22px;height:22px}
+.mf-detail h3{font-family:var(--font-display);font-size:24px;letter-spacing:-.02em;margin:25px 0 13px;color:#fff}
+.mf-detail p{color:rgba(255,255,255,.54);font-size:13px;line-height:1.72}
+.mf-detail-spec{
+  border-top:1px solid rgba(255,255,255,.1);
+  margin-top:22px;padding-top:14px;
+  color:#61baff;font-family:var(--font-mono);
+  font-size:8px;line-height:1.7;
+}
+.mf-spec-pills{position:relative;z-index:1;display:flex;gap:7px;flex-wrap:wrap;margin-top:22px}
+.mf-spec-pills span{
+  padding:9px 11px;border:1px solid rgba(255,255,255,.12);
+  color:rgba(255,255,255,.47);font-family:var(--font-mono);font-size:8px;letter-spacing:.06em;
+}
+
+/* Standards */
+.mf-standards-grid{
+  display:grid;grid-template-columns:1fr .9fr;gap:90px;
+  background:#fff;border:1px solid rgba(11,18,32,.09);
+  padding:58px;box-shadow:0 22px 65px rgba(11,18,32,.07);
+}
+.mf-standards-grid h2{font-size:clamp(28px,4vw,44px)}
+.mf-standards-grid p{max-width:520px;color:#687181;font-size:14px;line-height:1.7}
+.mf-standard-list{border-left:1px solid rgba(11,18,32,.1)}
+.mf-standard-list div{padding:20px 0 20px 25px;border-bottom:1px solid rgba(11,18,32,.09)}
+.mf-standard-list div:last-child{border-bottom:0}
+.mf-standard-list small{color:#0263CC;font-family:var(--font-mono);font-size:8px;margin-right:12px}
+.mf-standard-list strong{color:#0b1220;font-family:var(--font-mono);font-size:10px;letter-spacing:.04em}
+.mf-standard-list span{display:block;margin:7px 0 0 23px;color:#788291;font-size:11px}
+
+/* CTA */
+.mf-cta{
+  position:relative;overflow:hidden;
+  background:#0b1220;color:#fff;text-align:center;
+  padding:112px 0;
+}
+.mf-cta:before{
+  content:"";position:absolute;inset:0;
+  background-image:linear-gradient(rgba(255,255,255,.024) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.024) 1px,transparent 1px);
+  background-size:58px 58px;mask-image:linear-gradient(to bottom,#000,transparent);
+}
+.mf-cta-ring{
+  position:absolute;left:50%;top:-350px;
+  transform:translateX(-50%);border:1px solid rgba(54,168,255,.12);border-radius:50%;
+}
+.mf-ring-one{width:620px;height:620px;animation:mfPulseRing 6s ease-in-out infinite}
+.mf-ring-two{width:420px;height:420px;top:-250px;animation:mfPulseRing 6s 1s ease-in-out infinite}
+.mf-cta-inner{position:relative;z-index:1;max-width:800px;margin:auto}
+.mf-cta .eyebrow{color:#61baff}
+.mf-cta h2{
+  color:#fff;font-family:var(--font-display);
+  font-weight:600;
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.08;letter-spacing:-.005em;margin:12px 0 20px;
+}
+.mf-cta p{max-width:550px;margin:auto;color:rgba(255,255,255,.53);font-size:14px;line-height:1.7}
+.mf-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:30px}
+.mf-actions .btn-outline{color:#fff;border-color:rgba(255,255,255,.24)}
+
+/* Motion */
+.mf-reveal{
+  opacity:0;transform:translateY(25px);
+  transition:opacity .75s cubic-bezier(.22,1,.36,1),transform .75s cubic-bezier(.22,1,.36,1);
+}
+.mf-reveal.mf-visible{opacity:1;transform:none}
+.mf-stage:nth-child(2){transition-delay:.03s}.mf-stage:nth-child(3){transition-delay:.07s}.mf-stage:nth-child(4){transition-delay:.11s}.mf-stage:nth-child(5){transition-delay:.15s}.mf-stage:nth-child(6){transition-delay:.19s}.mf-stage:nth-child(7){transition-delay:.23s}
+
+@keyframes mfScan{0%,100%{top:0;opacity:0}12%{opacity:1}50%{top:100%;opacity:.65}62%{opacity:0}}
+@keyframes mfSpin{to{transform:rotate(360deg)}}
+@keyframes mfPulseRing{0%,100%{transform:translateX(-50%) scale(1);opacity:.5}50%{transform:translateX(-50%) scale(1.06);opacity:.2}}
+
+@media(max-width:900px){
+  .mf-facility-head,.mf-process-head,.mf-engineering-head,.mf-standards-grid{grid-template-columns:1fr;gap:35px}
+  .mf-factory{grid-template-columns:1fr}.mf-factory-visual{min-height:410px}
+  .mf-stats-grid{grid-template-columns:1fr 1fr}
+  .mf-stat:nth-child(2){border-right:0}
+  .mf-stat:nth-child(3),.mf-stat:nth-child(4){border-top:1px solid rgba(255,255,255,.11)}
+  .mf-detail-grid{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  .mf-facility,.mf-process,.mf-engineering,.mf-standards{padding:72px 0}
+  .mf-factory-panel{padding:38px 24px}
+  .mf-capabilities{grid-template-columns:1fr}
+  .mf-stat{padding:26px 13px!important}.mf-stat:first-child{padding-left:13px!important}
+  .mf-progress{left:49px}
+  .mf-stage{grid-template-columns:27px 35px 1fr;gap:12px;padding:23px 0}.mf-stage-mark{display:none}
+  .mf-stage-content h3{font-size:18px}.mf-stage-content p{font-size:12px}
+  .mf-detail{padding:32px 24px;min-height:0}
+  .mf-standards-grid{padding:35px 24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .mf-reveal{opacity:1!important;transform:none!important;transition:none!important}
+  .mf-factory-visual img,.mf-image-scan,.mf-orbit,.mf-cta-ring,.mf-stage,.mf-detail{animation:none!important;transition:none!important}
+}
+</style>
+
+
+<style>
+/* Final cleanup: no numbered section labels */
+.mf-kicker,
+.mf-detail-top span{display:none!important;}
+.mf-facility-head,
+.mf-process-head,
+.mf-engineering-head{margin-top:0;}
+.mf-facility-head{margin-bottom:52px;}
+.mf-process-head{margin-bottom:55px;}
+.mf-engineering-head{margin-bottom:52px;}
+.mf-standards-grid{margin-top:0;}
+</style>
+
+</head>
+<body class="page-fade-init dark-hero">
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+    <div class="nav-links">
+      <div class="nav-item nav-item-mega"><a href="products.html" class="nav-mega-trigger">Products<svg class="chev" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="mega-menu"><div class="mega-inner"><div class="mega-sidebar"><button type="button" class="mega-cat active" data-panel="pipes-fittings"><span>Pipes &amp; Fittings</span><em>30</em></button><button type="button" class="mega-cat" data-panel="valves"><span>Valves</span><em>7</em></button><button type="button" class="mega-cat" data-panel="bellows-special"><span>Bellows, SFIs &amp; Special</span><em>6</em></button><a href="products.html" class="mega-viewall">View All Products →</a></div><div class="mega-panels"><div class="mega-panel active" data-panel="pipes-fittings"><div class="mega-groups"><div class="mega-group"><h4>Spools, Elbows &amp; Reducers</h4><a href="products/ptfe-lined-spool-pipe.html">PTFE Lined Spool Pipe</a><a href="products/ptfe-lined-jacketed-spool-pipe.html">PTFE Lined Jacketed Spool Pipe</a><a href="products/ptfe-lined-elbow-90.html">PTFE Lined Elbow 90°</a><a href="products/ptfe-lined-elbow-45.html">PTFE Lined Elbow 45°</a><a href="products/ptfe-lined-concentric-reducer.html">PTFE Lined Concentric Reducer</a><a href="products/ptfe-lined-eccentric-reducer.html">PTFE Lined Eccentric Reducer</a><a href="products/ptfe-lined-reducing-flange.html">PTFE Lined Reducing Flange</a><a href="products/ptfe-lined-blind-flange.html">PTFE Lined Blind Flange</a><a href="products/ptfe-lined-full-face-adapter-flange.html">PTFE Lined Full Face Adapter Flange</a><a href="products/ptfe-lined-spectacle-blind.html">PTFE Lined Spectacle Blind</a></div><div class="mega-group"><h4>Tees &amp; Crosses</h4><a href="products/ptfe-lined-equal-tee.html">PTFE Lined Equal Tee</a><a href="products/ptfe-lined-unequal-tee.html">PTFE Lined Unequal Tee</a><a href="products/ptfe-lined-instrument-tee.html">PTFE Lined Instrument Tee</a><a href="products/ptfe-lined-unequal-lateral-tee.html">PTFE Lined Unequal Lateral Tee</a><a href="products/ptfe-lined-equal-lateral-tee.html">PTFE Lined Equal Lateral Tee</a><a href="products/ptfe-lined-equal-cross.html">PTFE Lined Equal Cross</a><a href="products/ptfe-lined-unequal-cross.html">PTFE Lined Unequal Cross</a></div><div class="mega-group"><h4>Dip Pipes &amp; Entry</h4><a href="products/ptfe-lined-dip-pipe.html">PTFE Lined Dip Pipe</a><a href="products/ptfe-lined-closed-dip-pipe.html">PTFE Lined Closed Dip Pipe</a><a href="products/ptfe-lined-curved-dip-pipe.html">PTFE Lined Curved Dip Pipe</a><a href="products/ptfe-lined-dip-pipe-with-sparger.html">PTFE Lined Dip Pipe with Sparger</a><a href="products/ptfe-lined-dip-leg.html">PTFE Lined Dip Leg</a><a href="products/ptfe-entry-pipe.html">PTFE Entry Pipe</a></div><div class="mega-group"><h4>Spacers, Strainers &amp; Hoses</h4><a href="products/ptfe-solid-tapered-spacer.html">PTFE Solid &amp; Tapered Spacer</a><a href="products/ptfe-lined-spacer.html">PTFE Lined Spacer</a><a href="products/ptfe-lined-distance-piece.html">PTFE Lined Distance Piece</a><a href="products/ptfe-lined-y-type-strainer.html">PTFE Lined Y-Type Strainer</a><a href="products/ptfe-lined-hose-nipple.html">PTFE Lined Hose Nipple</a><a href="products/ptfe-lined-hose-pipe.html">PTFE Lined Hose Pipe</a><a href="products/ptfe-lined-header.html">PTFE Lined Header</a></div></div></div><div class="mega-panel" data-panel="valves"><div class="mega-groups"><div class="mega-group"><h4>Valves</h4><a href="products/ptfe-lined-ball-valve.html">PTFE Lined Ball Valve</a><a href="products/ptfe-lined-butterfly-valve.html">PTFE Lined Butterfly Valve</a><a href="products/ptfe-lined-non-return-valve.html">PTFE Lined Non-Return Valve</a><a href="products/ptfe-lined-plug-valve.html">PTFE Lined Plug Valve</a><a href="products/ptfe-lined-diaphragm-valve.html">PTFE Lined Diaphragm Valve</a><a href="products/ptfe-lined-flush-bottom-valve.html">PTFE Lined Flush Bottom Valve</a><a href="products/ptfe-lined-swing-check-valve.html">PTFE Lined Swing Check Valve</a></div></div></div><div class="mega-panel" data-panel="bellows-special"><div class="mega-groups"><div class="mega-group"><h4>Bellows, SFIs &amp; Special Items</h4><a href="products/ptfe-moulded-high-pressure-bellow.html">PTFE Moulded High Pressure Bellow</a><a href="products/ptfe-machined-high-pressure-bellow.html">PTFE Machined High Pressure Bellow</a><a href="products/ptfe-lined-double-window-sfi.html">PTFE Lined Double Window SFI</a><a href="products/ptfe-lined-full-view-sfi.html">PTFE Lined Full View SFI (Tubular)</a><a href="products/ptfe-gasket-envelope-gasket.html">PTFE Gasket &amp; Envelope Gasket</a><a href="products/ptfe-t-bush-glr-nozzle.html">PTFE T-Bush for GLR Nozzle</a></div></div></div></div><div class="mega-promo">
+<span class="mega-promo-tag">Complete Catalog</span>
+<h4>43 Precision-Lined<br/>Flow Components</h4>
+<p>PTFE / PFA / FEP lined pipes, fittings, valves, bellows &amp; sight flow indicators — engineered to ASTM F1545.</p>
+<a href="products.html" class="btn btn-primary btn-sm">Browse All Products</a>
+<a href="contact.html" class="mega-promo-link">Request a Quote →</a>
+</div></div></div></div>
+<div class="nav-item nav-item-mega"><a href="industries.html" class="nav-mega-trigger">Industries<svg class="chev" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="mega-menu"><div class="mega-inner mega-inner-industries"><div class="mega-industry-list"><a href="industries.html#chemical-processing">Chemical Processing</a><a href="industries.html#pharmaceutical">Pharmaceutical</a><a href="industries.html#petrochemical">Petrochemical</a><a href="industries.html#fertilizer">Fertilizer</a><a href="industries.html#specialty-chemicals">Specialty Chemicals</a><a href="industries.html#mining">Mining</a><a href="industries.html#power-plants">Power Plants</a><a href="industries.html#oil-gas">Oil & Gas</a></div><div class="mega-promo"><span class="mega-promo-tag">8 Sectors Served</span><h4>Engineered Flow Solutions<br/>By Industry</h4><p>From chemical processing to oil &amp; gas — fluoropolymer-lined components matched to your process duty.</p><a href="industries.html" class="btn btn-primary btn-sm">Explore Industries</a><a href="contact.html" class="mega-promo-link">Request a Quote →</a></div></div></div></div>
+<a href="about.html">About</a>
+<a href="manufacturing.html" class="active">Manufacturing</a>
+<a href="quality.html">Quality</a>
+    </div>
+    <div class="nav-right">
+      <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search products" aria-expanded="false" aria-controls="navSearchPanel">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary nav-cta btn-sm">Request a Quote</a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-search-panel" id="navSearchPanel">
+    <form class="nav-search-form" id="navSearchForm">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="navSearchInput" placeholder="Search products… (e.g. PTFE Lined Ball Valve)" aria-label="Search products"/>
+      <button type="submit" class="btn btn-primary btn-sm">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+    <button class="close-btn" aria-label="Close menu">&times;</button>
+  </div>
+  <form class="mobile-search-wrap" id="mobileSearchForm">
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <input type="text" id="mobileSearchInput" placeholder="Search products…" aria-label="Search products"/>
+  </form>
+  <div class="mobile-nav-links">
+    <a href="products.html">Products</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About</a>
+<a href="manufacturing.html">Manufacturing</a>
+<a href="quality.html">Quality</a>
+  </div>
+  <div class="mobile-nav-foot">
+    <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  </div>
+</div>
+
+<!-- ================= PAGE BANNER ================= -->
+<section class="page-banner" style="background-image:url('assets/page-banner-bg.jpg')">
+  <div class="container">
+    <span class="eyebrow">Manufacturing</span>
+    <h1>Raw material to certified,<br/>dispatch-ready component.</h1>
+    <p>Complete in-house capability — CAD design, machining, liner extrusion, fabrication, painting and quality testing, all under one roof.</p>
+  </div>
+</section>
+<!-- ================= LIGHT / FACILITY ================= -->
+<section class="mf-facility">
+  <div class="container">
+<div class="mf-facility-head mf-reveal">
+      <div>
+        <span class="eyebrow">Our Manufacturing System</span>
+        <h2>Where every stage<br><em>stays connected.</em></h2>
+      </div>
+      <div class="mf-facility-intro">
+        <p>A component leaves the drawing board as an isometric on our CAD system and doesn't change hands again until it's tested, painted and boxed for dispatch.</p>
+      </div>
+    </div>
+
+    <div class="mf-factory">
+      <div class="mf-factory-visual mf-reveal">
+        <img src="assets/factory-2.jpeg" alt="Antico manufacturing facility exterior">
+        <div class="mf-image-scan"></div>
+        <div class="mf-image-meta">
+          <span>ANTICO / MFG-01</span>
+          <b>DESIGN → DISPATCH</b>
+        </div>
+        <div class="mf-image-corner">AFS</div>
+      </div>
+
+      <div class="mf-factory-panel mf-reveal">
+        <span class="eyebrow">One Facility. Full Build.</span>
+        <h3>No subcontracted lining.<br>No fragmented handoffs.</h3>
+        <p>Design, machining, liner extrusion, fabrication, painting and quality testing all sit inside the same facility.</p>
+        <p>That control helps us hold liner tolerances, trace faults back to the exact stage they occurred and quote fitting lists with delivery dates we can stand behind.</p>
+
+        <div class="mf-capabilities">
+          <div><span>01</span>CAD &amp; Design</div>
+          <div><span>02</span>Machining</div>
+          <div><span>03</span>Liner Extrusion</div>
+          <div><span>04</span>Fabrication</div>
+          <div><span>05</span>Painting</div>
+          <div><span>06</span>Quality Testing</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DARK / NUMBERS ================= -->
+<section class="mf-stats">
+  <div class="mf-orbit mf-orbit-a"></div>
+  <div class="mf-orbit mf-orbit-b"></div>
+  <div class="container">
+<div class="mf-stats-grid">
+      <div class="mf-stat mf-reveal"><strong>06</strong><span>In-House Process Stages</span><em>01</em></div>
+      <div class="mf-stat mf-reveal"><strong>43+</strong><span>Lined Components Manufactured</span><em>02</em></div>
+      <div class="mf-stat mf-reveal"><strong>100%</strong><span>Units Tested Before Dispatch</span><em>03</em></div>
+      <div class="mf-stat mf-reveal"><strong>60μm</strong><span>Min. Zinc Epoxy Primer Coat</span><em>04</em></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIGHT / PROCESS ================= -->
+<section class="mf-process">
+  <div class="container">
+<div class="mf-process-head mf-reveal">
+      <h2>Six stages.<br><em>One accountable team.</em></h2>
+      <p>Each stage feeds directly into the next — the same team that machines the body is accountable for the liner that goes inside it.</p>
+    </div>
+
+    <div class="mf-timeline">
+      <div class="mf-progress"></div>
+
+      <article class="mf-stage mf-reveal">
+        <div class="mf-stage-index">01</div>
+        <div class="mf-stage-node"><span></span></div>
+        <div class="mf-stage-content">
+          <span>DESIGN / CAD</span>
+          <h3>Computerised Design / CAD</h3>
+          <p>Isometric and component drawings developed with our engineering team to establish the fitting list for your line.</p>
+        </div>
+        <div class="mf-stage-mark">↗</div>
+      </article>
+
+      <article class="mf-stage mf-reveal">
+        <div class="mf-stage-index">02</div>
+        <div class="mf-stage-node"><span></span></div>
+        <div class="mf-stage-content">
+          <span>MACHINING</span>
+          <h3>Machining Workshop</h3>
+          <p>Steel bodies, flanges and bends machined to the dimensions required for lining.</p>
+        </div>
+        <div class="mf-stage-mark">↗</div>
+      </article>
+
+      <article class="mf-stage mf-reveal">
+        <div class="mf-stage-index">03</div>
+        <div class="mf-stage-node"><span></span></div>
+        <div class="mf-stage-content">
+          <span>LINING</span>
+          <h3>Liner Extrusion &amp; Injection</h3>
+          <p>Fluoropolymer liners applied by a state-of-the-art paste extruding process.</p>
+        </div>
+        <div class="mf-stage-mark">↗</div>
+      </article>
+
+      <article class="mf-stage mf-reveal">
+        <div class="mf-stage-index">04</div>
+        <div class="mf-stage-node"><span></span></div>
+        <div class="mf-stage-content">
+          <span>FABRICATION</span>
+          <h3>Pipe &amp; Fitting Fabrication</h3>
+          <p>Welded and cast components fabricated to ANSI/ASME B16.5 and B16.10/B16.9 standards.</p>
+        </div>
+        <div class="mf-stage-mark">↗</div>
+      </article>
+
+      <article class="mf-stage mf-reveal">
+        <div class="mf-stage-index">05</div>
+        <div class="mf-stage-node"><span></span></div>
+        <div class="mf-stage-content">
+          <span>PROTECTION</span>
+          <h3>Painting</h3>
+          <p>Sand-blasted steel coated with a zinc epoxy primer (min. 60μm) per S.A 2.5 cleanliness standard.</p>
+        </div>
+        <div class="mf-stage-mark">↗</div>
+      </article>
+
+      <article class="mf-stage mf-reveal">
+        <div class="mf-stage-index">06</div>
+        <div class="mf-stage-node"><span></span></div>
+        <div class="mf-stage-content">
+          <span>VERIFICATION</span>
+          <h3>Quality Testing</h3>
+          <p>Dimensional, spark and hydrostatic/pneumatic pressure testing before dispatch.</p>
+        </div>
+        <div class="mf-stage-mark">↗</div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DARK / ENGINEERING DETAIL ================= -->
+<section class="mf-engineering">
+  <div class="mf-tech-grid"></div>
+  <div class="container">
+<div class="mf-engineering-head mf-reveal">
+      <h2>Built around the<br><em>details you don't see.</em></h2>
+      <p>Two details that don't always show up on a spec sheet — but matter every day the fitting is in service.</p>
+    </div>
+
+    <div class="mf-detail-grid">
+      <article class="mf-detail mf-reveal">
+        <div class="mf-detail-top"><b>VENT</b></div>
+        <div class="mf-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="13.5" r="7" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="13.5" r="1.3" fill="currentColor"/><path d="M12 3v3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+        </div>
+        <h3>Vent Holes</h3>
+        <p>Drilled into the steel body of every lined fitting to relieve back pressure between the metal housing and the liner, allow leak detection during pressure testing, and flag corrosion early.</p>
+        <div class="mf-detail-spec">Spools under 500mm carry a single 3mm vent hole; spools over 500mm carry two, spaced ~150mm from each end.</div>
+      </article>
+
+      <article class="mf-detail mf-reveal">
+        <div class="mf-detail-top"><b>EARTHING</b></div>
+        <div class="mf-detail-icon">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M13 2 4 14h6l-1 8 9-12h-6l1-8Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
+        </div>
+        <h3>Electrical Continuity</h3>
+        <p>Established via conductors attached to earthing lugs — welded centrally for fittings and spools under 500mm, or ~150mm from the rear of each flange for spools over 500mm.</p>
+        <div class="mf-detail-spec">Type A or B earthing lugs in SS 304 or SS 316 are available on request.</div>
+      </article>
+    </div>
+
+    <div class="mf-spec-pills mf-reveal">
+      <span>TYPE A EARTHING LUG</span>
+      <span>TYPE B EARTHING LUG</span>
+      <span>SS 304</span>
+      <span>SS 316</span>
+    </div>
+  </div>
+</section>
+
+<!-- ================= LIGHT / STANDARDS ================= -->
+<section class="mf-standards">
+  <div class="container">
+<div class="mf-standards-grid mf-reveal">
+      <div>
+        <span class="eyebrow">Standards &amp; Compliance</span>
+        <h2>Built to the specification.<br><em>Tested as a whole.</em></h2>
+        <p>Every component is manufactured, dimensioned and tested against internationally recognised specifications — not just the liner, the fitting as a whole.</p>
+      </div>
+      <div class="mf-standard-list">
+        <div><small>01</small><strong>ASTM F1545</strong><span>Fluoropolymer lined components</span></div>
+        <div><small>02</small><strong>ANSI/ASME B16.5</strong><span>Flanges and flanged fittings</span></div>
+        <div><small>03</small><strong>ANSI/ASME B16.10 / B16.9</strong><span>Dimensions and fabricated fittings</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= DARK / CTA ================= -->
+<section class="mf-cta">
+  <div class="mf-cta-ring mf-ring-one"></div>
+  <div class="mf-cta-ring mf-ring-two"></div>
+  <div class="container">
+    <div class="mf-cta-inner mf-reveal">
+      <span class="eyebrow">06 / ENGINEERING-LED FITTING LISTS</span>
+      <h2>Have a fitting list<br><em>to review?</em></h2>
+      <p>Our engineering team can help construct isometric drawings and a complete component list.</p>
+      <div class="mf-actions">
+        <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+        <a href="quality.html" class="btn btn-outline">See Our Quality Process</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+        <p class="footer-tag">Engineered for corrosion. Trusted for performance. Fluoropolymer-lined flow systems for demanding process industries.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="products.html?category=pipes-fittings">Pipes & Fittings</a>
+<a href="products.html?category=valves">Valves</a>
+<a href="products.html?category=bellows">Expansion Bellows</a>
+<a href="products.html?category=sight-flow-indicators">Sight Flow Indicators</a>
+<a href="products.html?category=special-products">Special Design Products</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="manufacturing.html">Manufacturing</a>
+        <a href="quality.html">Quality</a>
+        <a href="industries.html">Industries</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get In Touch</h5>
+        <a href="tel:+919601176639">+91 96011 76639</a>
+        <a href="mailto:sales@anticoflow.com">sales@anticoflow.com</a>
+        <a href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Antico Flow System. All rights reserved.</span>
+      <span>Privacy Policy &nbsp;·&nbsp; Terms &amp; Conditions</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+
+
+<script>
+(function(){
+  const items=document.querySelectorAll('.mf-reveal');
+  if(!items.length) return;
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){
+    items.forEach(el=>el.classList.add('mf-visible')); return;
+  }
+  if(!('IntersectionObserver' in window)){
+    items.forEach(el=>el.classList.add('mf-visible')); return;
+  }
+  const io=new IntersectionObserver((entries,obs)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.add('mf-visible');
+      obs.unobserve(entry.target);
+    });
+  },{threshold:.08,rootMargin:'0px 0px -30px 0px'});
+  items.forEach(el=>io.observe(el));
+  setTimeout(()=>items.forEach(el=>el.classList.add('mf-visible')),2600);
+})();
+</script>
+
+</body>
+</html>

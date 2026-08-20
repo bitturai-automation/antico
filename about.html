@@ -1,0 +1,850 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>About | Antico Flow System</title>
+<meta name="description" content="Antico Flow System designs and manufactures fluoropolymer lined pipes, fittings, valves and custom flow components for corrosive process industries."/>
+<meta property="og:title" content="About | Antico Flow System"/>
+<meta property="og:description" content="Antico Flow System designs and manufactures fluoropolymer lined pipes, fittings, valves and custom flow components for corrosive process industries."/>
+<meta property="og:type" content="website"/>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/styles.css"/>
+
+
+<style>
+/* =========================================================
+   ABOUT PAGE — UI REDESIGN V2
+   Hero intentionally untouched.
+   ========================================================= */
+
+body.dark-hero{
+  --about-line:rgba(14,21,38,.11);
+  --about-soft:#f7f8fa;
+  --about-blue:#0263CC;
+}
+
+/* Story section */
+.about-page{} /* harmless hook if used later */
+
+.section-light .split{
+  align-items:stretch;
+  gap:72px;
+}
+.section-light .split-copy{
+  padding:22px 0 10px;
+}
+.section-light .split-copy h2{
+  font-size:clamp(28px,4vw,44px);
+  line-height:1.08;
+  letter-spacing:-.005em;
+  max-width:560px;
+  margin-bottom:24px;
+}
+.section-light .split-copy p{
+  max-width:590px;
+  color:#626b79;
+  line-height:1.78;
+  font-size:15.5px;
+}
+.section-light .split-copy p + p{margin-top:18px;}
+
+.section-light .split-media{
+  position:relative;
+}
+.section-light .split-media img{
+  width:100%;
+  height:480px;
+  object-fit:cover;
+  border-radius:4px;
+  box-shadow:0 24px 60px rgba(14,21,38,.13);
+  filter:saturate(.82) contrast(1.03);
+}
+.story-chip{
+  position:absolute!important;
+  left:-28px!important;
+  bottom:28px!important;
+  background:#0b1220!important;
+  color:#fff!important;
+  border:1px solid rgba(255,255,255,.1);
+  box-shadow:0 18px 45px rgba(0,0,0,.18);
+  border-radius:3px!important;
+  padding:17px 20px!important;
+}
+.story-chip b{font-family:var(--font-body);font-size:13px;}
+.story-chip span{color:rgba(255,255,255,.55)!important;font-size:11px;}
+
+/* Stats — technical data strip */
+.stat-band{
+  background:#0b1220!important;
+  position:relative;
+  overflow:hidden;
+}
+.stat-band:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background-image:
+    linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:55px 55px;
+  mask-image:linear-gradient(90deg,#000,transparent);
+}
+.stat-band-grid{
+  position:relative;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+}
+.stat-cell{
+  padding:42px 30px;
+  border-right:1px solid rgba(255,255,255,.12)!important;
+  position:relative;
+}
+.stat-cell:last-child{border-right:0!important;}
+.stat-cell b{
+  display:block;
+  color:#fff!important;
+  font-family:var(--font-display);
+  font-size:clamp(26px,3.4vw,38px)!important;
+  line-height:1;
+  letter-spacing:-.02em;
+}
+.stat-cell span{
+  display:block;
+  margin-top:11px;
+  color:rgba(255,255,255,.48)!important;
+  font-family:var(--font-mono);
+  text-transform:uppercase;
+  letter-spacing:.1em;
+  font-size:9.5px!important;
+}
+
+/* Vision / Mission */
+.principles-grid{
+  gap:0!important;
+  border:1px solid var(--about-line);
+}
+.principle-panel{
+  position:relative;
+  min-height:320px;
+  padding:48px!important;
+  border-radius:0!important;
+  background:#f5f6f8!important;
+  border-right:1px solid var(--about-line);
+  overflow:hidden;
+}
+.principle-panel:last-child{
+  background:#0b1220!important;
+  border-right:0;
+}
+.principle-panel .ghost-num{
+  position:absolute;
+  right:24px;
+  top:15px;
+  font-family:var(--font-display);
+  font-size:120px!important;
+  line-height:1;
+  color:rgba(14,21,38,.055)!important;
+  font-weight:700;
+}
+.principle-panel:last-child .ghost-num{
+  color:rgba(255,255,255,.055)!important;
+}
+.principle-panel h3{
+  position:relative;
+  max-width:500px;
+  font-size:clamp(28px,3vw,42px)!important;
+  line-height:1.06!important;
+  margin:20px 0 18px!important;
+}
+.principle-panel:last-child h3{color:#fff!important;}
+.principle-panel p{
+  position:relative;
+  max-width:500px;
+  color:#667080!important;
+  line-height:1.7!important;
+}
+.principle-panel:last-child p{color:rgba(255,255,255,.58)!important;}
+.principle-panel .eyebrow{position:relative;}
+
+/* Core values */
+.section-dark{
+  background:#0b1220!important;
+}
+.section-dark .section-head h2{
+  color:#fff!important;
+}
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr)!important;
+  gap:1px!important;
+  background:rgba(255,255,255,.1);
+  border:1px solid rgba(255,255,255,.1);
+}
+.feature-card{
+  min-height:255px;
+  border:0!important;
+  border-radius:0!important;
+  background:#0b1220!important;
+  padding:32px!important;
+  position:relative;
+  transition:background .25s ease,transform .25s ease;
+}
+.feature-card:hover{
+  background:#111b2e!important;
+  transform:translateY(-3px);
+}
+.feature-card .fic{
+  width:42px!important;
+  height:42px!important;
+  border:1px solid rgba(93,183,255,.28);
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#5eb7ff!important;
+  margin-bottom:28px!important;
+}
+.feature-card .fic svg{width:19px;height:19px;}
+.feature-card .num{
+  position:absolute;
+  right:25px;
+  top:28px;
+  font-family:var(--font-mono);
+  font-size:10px!important;
+  color:rgba(255,255,255,.28)!important;
+}
+.feature-card h3{
+  color:#fff!important;
+  font-size:24px!important;
+  margin-bottom:10px!important;
+}
+.feature-card p{
+  color:rgba(255,255,255,.53)!important;
+  font-size:13px!important;
+  line-height:1.65!important;
+  max-width:330px;
+}
+
+/* Manufacturing section */
+.section-light .split.reverse{
+  gap:78px;
+}
+.section-light .split.reverse .split-media img{
+  height:500px;
+}
+.section-light .split.reverse .split-copy h2{
+  max-width:520px;
+}
+.section-light .split.reverse .split-copy p{
+  max-width:570px;
+}
+
+/* Standards strip */
+.standards-strip{
+  margin-top:56px!important;
+  padding:28px 30px!important;
+  background:#f4f6f9!important;
+  border:1px solid var(--about-line)!important;
+  border-radius:3px!important;
+  display:grid!important;
+  grid-template-columns:1.1fr 1fr;
+  gap:35px;
+  align-items:center;
+}
+.st-copy h3{
+  font-size:25px!important;
+  line-height:1.12!important;
+  margin-bottom:9px;
+}
+.st-copy p{
+  color:#687181!important;
+  font-size:13px!important;
+  line-height:1.6!important;
+}
+.standards-strip .badge{
+  background:#fff!important;
+  border:1px solid rgba(14,21,38,.1)!important;
+  color:#253044!important;
+  border-radius:999px!important;
+  font-family:var(--font-mono);
+  font-size:9px!important;
+  letter-spacing:.04em;
+  padding:9px 12px!important;
+}
+.standards-strip .badge svg{
+  color:var(--about-blue);
+}
+
+/* CTA */
+.final-cta{
+  max-width:820px;
+  margin:0 auto;
+  padding:72px 30px;
+  text-align:center;
+  border:1px solid rgba(255,255,255,.1);
+  background:
+    radial-gradient(500px 220px at 50% 0%,rgba(2,99,204,.18),transparent 70%),
+    #101a2c;
+}
+.final-cta h2{
+  color:#fff!important;
+  font-size:clamp(28px,4vw,44px)!important;
+  line-height:1.08!important;
+  letter-spacing:-.005em;
+  margin-bottom:14px;
+}
+.final-cta p{
+  color:rgba(255,255,255,.57)!important;
+  font-size:15px;
+}
+.final-cta .actions{margin-top:28px;}
+
+/* Keep existing section rhythm but make it more editorial */
+.section-head{
+  margin-bottom:48px!important;
+}
+.section-head .eyebrow{margin-bottom:13px;}
+
+/* Responsive */
+@media(max-width:900px){
+  .stat-band-grid{grid-template-columns:repeat(2,1fr);}
+  .stat-cell:nth-child(2){border-right:0!important;}
+  .stat-cell:nth-child(3),.stat-cell:nth-child(4){border-top:1px solid rgba(255,255,255,.12);}
+  .feature-grid{grid-template-columns:repeat(2,1fr)!important;}
+  .feature-card:nth-child(2n){border-right:0!important;}
+  .standards-strip{grid-template-columns:1fr;}
+}
+@media(max-width:768px){
+  .section-light .split,
+  .section-light .split.reverse{gap:45px;}
+  .section-light .split-media img,
+  .section-light .split.reverse .split-media img{height:360px;}
+  .story-chip{left:15px!important;bottom:15px!important;}
+  .principle-panel{min-height:290px;padding:35px!important;border-right:0;border-bottom:1px solid var(--about-line);}
+  .principle-panel:last-child{border-bottom:0;}
+  .feature-grid{grid-template-columns:1fr!important;}
+  .feature-card{min-height:220px;}
+  .standards-strip{padding:24px!important;}
+}
+@media(max-width:520px){
+  .stat-cell{padding:28px 18px;}
+  .principle-panel .ghost-num{font-size:90px!important;}
+}
+</style>
+
+
+<style>
+/* =========================================================
+   ABOUT PAGE — MOTION LAYER
+   Hero remains untouched.
+   ========================================================= */
+
+
+/* Safe motion state — content is visible by default */
+.about-motion-hidden{
+  opacity:0;
+  transform:translateY(24px);
+}
+.about-motion-visible{
+  opacity:1;
+  transform:translateY(0);
+}
+
+@keyframes afsFadeUp{
+  from{opacity:0;transform:translateY(28px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@keyframes afsFadeLeft{
+  from{opacity:0;transform:translateX(-30px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes afsFadeRight{
+  from{opacity:0;transform:translateX(30px)}
+  to{opacity:1;transform:translateX(0)}
+}
+@keyframes afsScaleIn{
+  from{opacity:0;transform:scale(.94)}
+  to{opacity:1;transform:scale(1)}
+}
+@keyframes afsLineGrow{
+  from{transform:scaleX(0);transform-origin:left}
+  to{transform:scaleX(1);transform-origin:left}
+}
+@keyframes afsPulse{
+  0%,100%{box-shadow:0 0 0 0 rgba(2,99,204,.08)}
+  50%{box-shadow:0 0 0 10px rgba(2,99,204,0)}
+}
+
+/* Scroll-reveal: use a dedicated state so the site's existing
+   reveal system is never overridden. */
+
+/* Story image */
+.section-light .split-media{
+  transition:transform .8s cubic-bezier(.22,1,.36,1);
+}
+.section-light .split-media:hover{
+  transform:translateY(-5px);
+}
+.section-light .split-media img{
+  transition:transform 1.1s cubic-bezier(.22,1,.36,1),filter .6s ease;
+}
+.section-light .split-media:hover img{
+  transform:scale(1.025);
+  filter:saturate(.95) contrast(1.04);
+}
+
+/* Story chip */
+.story-chip{
+  animation:afsPulse 3.5s ease-in-out infinite;
+  transition:transform .35s ease;
+}
+.story-chip:hover{
+  transform:translateY(-4px);
+}
+
+/* Stats */
+.stat-cell{
+  overflow:hidden;
+  transition:background .35s ease,transform .35s ease;
+}
+.stat-cell:hover{
+  background:rgba(255,255,255,.045);
+}
+.stat-cell b{
+  transition:transform .35s ease,color .35s ease;
+}
+.stat-cell:hover b{
+  transform:translateX(5px);
+  color:#69bdff!important;
+}
+
+/* Vision / mission */
+.principle-panel{
+  transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    box-shadow .45s ease,
+    background .35s ease;
+}
+.principle-panel:hover{
+  transform:translateY(-7px);
+  box-shadow:0 22px 50px rgba(14,21,38,.12);
+  z-index:2;
+}
+.principle-panel:last-child:hover{
+  box-shadow:0 22px 50px rgba(0,0,0,.25);
+}
+.principle-panel .ghost-num{
+  transition:transform .6s cubic-bezier(.22,1,.36,1),opacity .4s ease;
+}
+.principle-panel:hover .ghost-num{
+  transform:translate(-8px,8px);
+}
+
+/* Core values */
+.feature-card{
+  transition:
+    transform .45s cubic-bezier(.22,1,.36,1),
+    background .35s ease,
+    box-shadow .45s ease;
+}
+.feature-card:hover{
+  transform:translateY(-8px)!important;
+  box-shadow:0 18px 45px rgba(0,0,0,.2);
+}
+.feature-card .fic{
+  transition:transform .45s cubic-bezier(.22,1,.36,1),background .35s ease;
+}
+.feature-card:hover .fic{
+  transform:rotate(8deg) scale(1.08);
+  background:rgba(2,99,204,.1);
+}
+
+/* Manufacturing */
+.about-manufacturing .split-media,
+.section-light .split.reverse .split-media{
+  overflow:hidden;
+}
+.section-light .split.reverse .split-media img{
+  transition:transform 1.1s cubic-bezier(.22,1,.36,1),filter .7s ease;
+}
+.section-light .split.reverse .split-media:hover img{
+  transform:scale(1.035);
+  filter:saturate(.9) contrast(1.04);
+}
+
+/* Standards badges */
+.standards-strip .badge{
+  transition:
+    transform .3s ease,
+    border-color .3s ease,
+    box-shadow .3s ease;
+}
+.standards-strip .badge:hover{
+  transform:translateY(-3px);
+  border-color:rgba(2,99,204,.28)!important;
+  box-shadow:0 8px 20px rgba(14,21,38,.08);
+}
+
+/* CTA */
+.final-cta{
+  position:relative;
+  overflow:hidden;
+}
+.final-cta:before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  border:1px solid rgba(80,183,255,.12);
+  border-radius:50%;
+  right:-100px;
+  top:-140px;
+  transition:transform 1.2s cubic-bezier(.22,1,.36,1);
+}
+.final-cta:hover:before{
+  transform:scale(1.25);
+}
+
+/* Button micro-interaction */
+.section:not(.page-banner) .btn,
+.section:not(.page-banner) .btn-ghost{
+  transition:
+    transform .3s cubic-bezier(.22,1,.36,1),
+    box-shadow .3s ease,
+    background .3s ease,
+    border-color .3s ease;
+}
+.section:not(.page-banner) .btn:hover,
+.section:not(.page-banner) .btn-ghost:hover{
+  transform:translateY(-3px);
+}
+
+/* Stagger cards after reveal */
+.feature-grid .feature-card:nth-child(1),
+.values-grid .value-item:nth-child(1){transition-delay:.02s}
+.feature-grid .feature-card:nth-child(2),
+.values-grid .value-item:nth-child(2){transition-delay:.08s}
+.feature-grid .feature-card:nth-child(3),
+.values-grid .value-item:nth-child(3){transition-delay:.14s}
+.feature-grid .feature-card:nth-child(4),
+.values-grid .value-item:nth-child(4){transition-delay:.20s}
+.feature-grid .feature-card:nth-child(5),
+.values-grid .value-item:nth-child(5){transition-delay:.26s}
+.feature-grid .feature-card:nth-child(6),
+.values-grid .value-item:nth-child(6){transition-delay:.32s}
+
+/* Respect accessibility */
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+    transition-duration:.01ms!important;
+  }
+  .js-reveal:not(.is-visible),
+  .reveal{
+    opacity:1!important;
+    transform:none!important;
+  }
+}
+</style>
+
+</head>
+<body class="page-fade-init dark-hero">
+
+<nav class="navbar">
+  <div class="nav-inner">
+    <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+    <div class="nav-links">
+      <div class="nav-item nav-item-mega"><a href="products.html" class="nav-mega-trigger">Products<svg class="chev" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="mega-menu"><div class="mega-inner"><div class="mega-sidebar"><button type="button" class="mega-cat active" data-panel="pipes-fittings"><span>Pipes &amp; Fittings</span><em>30</em></button><button type="button" class="mega-cat" data-panel="valves"><span>Valves</span><em>7</em></button><button type="button" class="mega-cat" data-panel="bellows-special"><span>Bellows, SFIs &amp; Special</span><em>6</em></button><a href="products.html" class="mega-viewall">View All Products →</a></div><div class="mega-panels"><div class="mega-panel active" data-panel="pipes-fittings"><div class="mega-groups"><div class="mega-group"><h4>Spools, Elbows &amp; Reducers</h4><a href="products/ptfe-lined-spool-pipe.html">PTFE Lined Spool Pipe</a><a href="products/ptfe-lined-jacketed-spool-pipe.html">PTFE Lined Jacketed Spool Pipe</a><a href="products/ptfe-lined-elbow-90.html">PTFE Lined Elbow 90°</a><a href="products/ptfe-lined-elbow-45.html">PTFE Lined Elbow 45°</a><a href="products/ptfe-lined-concentric-reducer.html">PTFE Lined Concentric Reducer</a><a href="products/ptfe-lined-eccentric-reducer.html">PTFE Lined Eccentric Reducer</a><a href="products/ptfe-lined-reducing-flange.html">PTFE Lined Reducing Flange</a><a href="products/ptfe-lined-blind-flange.html">PTFE Lined Blind Flange</a><a href="products/ptfe-lined-full-face-adapter-flange.html">PTFE Lined Full Face Adapter Flange</a><a href="products/ptfe-lined-spectacle-blind.html">PTFE Lined Spectacle Blind</a></div><div class="mega-group"><h4>Tees &amp; Crosses</h4><a href="products/ptfe-lined-equal-tee.html">PTFE Lined Equal Tee</a><a href="products/ptfe-lined-unequal-tee.html">PTFE Lined Unequal Tee</a><a href="products/ptfe-lined-instrument-tee.html">PTFE Lined Instrument Tee</a><a href="products/ptfe-lined-unequal-lateral-tee.html">PTFE Lined Unequal Lateral Tee</a><a href="products/ptfe-lined-equal-lateral-tee.html">PTFE Lined Equal Lateral Tee</a><a href="products/ptfe-lined-equal-cross.html">PTFE Lined Equal Cross</a><a href="products/ptfe-lined-unequal-cross.html">PTFE Lined Unequal Cross</a></div><div class="mega-group"><h4>Dip Pipes &amp; Entry</h4><a href="products/ptfe-lined-dip-pipe.html">PTFE Lined Dip Pipe</a><a href="products/ptfe-lined-closed-dip-pipe.html">PTFE Lined Closed Dip Pipe</a><a href="products/ptfe-lined-curved-dip-pipe.html">PTFE Lined Curved Dip Pipe</a><a href="products/ptfe-lined-dip-pipe-with-sparger.html">PTFE Lined Dip Pipe with Sparger</a><a href="products/ptfe-lined-dip-leg.html">PTFE Lined Dip Leg</a><a href="products/ptfe-entry-pipe.html">PTFE Entry Pipe</a></div><div class="mega-group"><h4>Spacers, Strainers &amp; Hoses</h4><a href="products/ptfe-solid-tapered-spacer.html">PTFE Solid &amp; Tapered Spacer</a><a href="products/ptfe-lined-spacer.html">PTFE Lined Spacer</a><a href="products/ptfe-lined-distance-piece.html">PTFE Lined Distance Piece</a><a href="products/ptfe-lined-y-type-strainer.html">PTFE Lined Y-Type Strainer</a><a href="products/ptfe-lined-hose-nipple.html">PTFE Lined Hose Nipple</a><a href="products/ptfe-lined-hose-pipe.html">PTFE Lined Hose Pipe</a><a href="products/ptfe-lined-header.html">PTFE Lined Header</a></div></div></div><div class="mega-panel" data-panel="valves"><div class="mega-groups"><div class="mega-group"><h4>Valves</h4><a href="products/ptfe-lined-ball-valve.html">PTFE Lined Ball Valve</a><a href="products/ptfe-lined-butterfly-valve.html">PTFE Lined Butterfly Valve</a><a href="products/ptfe-lined-non-return-valve.html">PTFE Lined Non-Return Valve</a><a href="products/ptfe-lined-plug-valve.html">PTFE Lined Plug Valve</a><a href="products/ptfe-lined-diaphragm-valve.html">PTFE Lined Diaphragm Valve</a><a href="products/ptfe-lined-flush-bottom-valve.html">PTFE Lined Flush Bottom Valve</a><a href="products/ptfe-lined-swing-check-valve.html">PTFE Lined Swing Check Valve</a></div></div></div><div class="mega-panel" data-panel="bellows-special"><div class="mega-groups"><div class="mega-group"><h4>Bellows, SFIs &amp; Special Items</h4><a href="products/ptfe-moulded-high-pressure-bellow.html">PTFE Moulded High Pressure Bellow</a><a href="products/ptfe-machined-high-pressure-bellow.html">PTFE Machined High Pressure Bellow</a><a href="products/ptfe-lined-double-window-sfi.html">PTFE Lined Double Window SFI</a><a href="products/ptfe-lined-full-view-sfi.html">PTFE Lined Full View SFI (Tubular)</a><a href="products/ptfe-gasket-envelope-gasket.html">PTFE Gasket &amp; Envelope Gasket</a><a href="products/ptfe-t-bush-glr-nozzle.html">PTFE T-Bush for GLR Nozzle</a></div></div></div></div><div class="mega-promo">
+<span class="mega-promo-tag">Complete Catalog</span>
+<h4>43 Precision-Lined<br/>Flow Components</h4>
+<p>PTFE / PFA / FEP lined pipes, fittings, valves, bellows &amp; sight flow indicators — engineered to ASTM F1545.</p>
+<a href="products.html" class="btn btn-primary btn-sm">Browse All Products</a>
+<a href="contact.html" class="mega-promo-link">Request a Quote →</a>
+</div></div></div></div>
+<div class="nav-item nav-item-mega"><a href="industries.html" class="nav-mega-trigger">Industries<svg class="chev" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1 1.5L6 6.5L11 1.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></a><div class="mega-menu"><div class="mega-inner mega-inner-industries"><div class="mega-industry-list"><a href="industries.html#chemical-processing">Chemical Processing</a><a href="industries.html#pharmaceutical">Pharmaceutical</a><a href="industries.html#petrochemical">Petrochemical</a><a href="industries.html#fertilizer">Fertilizer</a><a href="industries.html#specialty-chemicals">Specialty Chemicals</a><a href="industries.html#mining">Mining</a><a href="industries.html#power-plants">Power Plants</a><a href="industries.html#oil-gas">Oil & Gas</a></div><div class="mega-promo"><span class="mega-promo-tag">8 Sectors Served</span><h4>Engineered Flow Solutions<br/>By Industry</h4><p>From chemical processing to oil &amp; gas — fluoropolymer-lined components matched to your process duty.</p><a href="industries.html" class="btn btn-primary btn-sm">Explore Industries</a><a href="contact.html" class="mega-promo-link">Request a Quote →</a></div></div></div></div>
+<a href="about.html" class="active">About</a>
+<a href="manufacturing.html">Manufacturing</a>
+<a href="quality.html">Quality</a>
+    </div>
+    <div class="nav-right">
+      <button type="button" class="nav-search-toggle" id="navSearchToggle" aria-label="Search products" aria-expanded="false" aria-controls="navSearchPanel">
+        <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      </button>
+      <a href="contact.html" class="btn btn-primary nav-cta btn-sm">Request a Quote</a>
+      <button class="hamburger" aria-label="Open menu"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+  <div class="nav-search-panel" id="navSearchPanel">
+    <form class="nav-search-form" id="navSearchForm">
+      <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+      <input type="text" id="navSearchInput" placeholder="Search products… (e.g. PTFE Lined Ball Valve)" aria-label="Search products"/>
+      <button type="submit" class="btn btn-primary btn-sm">Search</button>
+    </form>
+  </div>
+</nav>
+<div class="mobile-nav">
+  <div class="mobile-nav-top">
+    <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+    <button class="close-btn" aria-label="Close menu">&times;</button>
+  </div>
+  <form class="mobile-search-wrap" id="mobileSearchForm">
+    <svg viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="9" cy="9" r="6.5" stroke="currentColor" stroke-width="1.6"/><path d="M18 18L14 14" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
+    <input type="text" id="mobileSearchInput" placeholder="Search products…" aria-label="Search products"/>
+  </form>
+  <div class="mobile-nav-links">
+    <a href="products.html">Products</a>
+<a href="industries.html">Industries</a>
+<a href="about.html">About</a>
+<a href="manufacturing.html">Manufacturing</a>
+<a href="quality.html">Quality</a>
+  </div>
+  <div class="mobile-nav-foot">
+    <a href="contact.html" class="btn btn-primary">Request a Quote</a>
+  </div>
+</div>
+
+<section class="page-banner" style="background-image:url('assets/page-banner-bg.jpg')">
+  <div class="container">
+    <span class="eyebrow">About Us</span>
+    <h1>Engineered so the metal never touches the process.</h1>
+    <p>Antico Flow System designs and manufactures fluoropolymer lined pipes, fittings, valves and custom flow components for industries where a single leak isn't an option.</p>
+  </div>
+</section>
+
+
+<section class="section section-light">
+  <div class="container">
+    <div class="split reveal">
+      <div class="split-copy">
+        <span class="eyebrow">Our Story</span>
+        <h2>Built around one material science.</h2>
+        <p>Our product range is built entirely around fluoropolymer lining technology — PTFE, PFA and FEP — applied through a precision paste-extruding lining process onto engineered carbon steel, stainless steel or cast bodies.</p>
+        <p>Every product in the range, from a single lined spool to a fully lined ball valve, is designed so the process fluid only ever touches inert fluoropolymer, never the structural metal body. It's a narrow focus, kept deliberately — one lining discipline, applied consistently across 43 components.</p>
+      </div>
+      <div class="split-media">
+        <img src="assets/factory-2.jpeg" alt="Antico manufacturing facility exterior"/>
+        <div class="story-chip">
+          <div class="ic-wrap"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7 3.5v6c0 4.5-3 7.5-7 8.5-4-1-7-4-7-8.5v-6L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <div><b>Metal never meets fluid</b><span>Inert lining on every wetted surface</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="stat-band">
+  <div class="container">
+    <div class="stat-band-grid reveal">
+      <div class="stat-cell"><b data-count="43+">0</b><span>Lined Components</span></div>
+      <div class="stat-cell"><b data-count="8">0</b><span>Industries Served</span></div>
+      <div class="stat-cell"><b data-count="3">0</b><span>Fluoropolymer Linings</span></div>
+      <div class="stat-cell"><b data-count="100%">0</b><span>Finished-Product Tested</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">Vision &amp; Mission</span>
+      <h2>Two ideas, held to the same standard.</h2>
+    </div>
+    <div class="principles-grid reveal">
+      <div class="principle-panel">
+        <span class="ghost-num">01</span>
+        <span class="eyebrow">Vision</span>
+        <h3>The trusted standard in corrosion-resistant flow.</h3>
+        <p>To be the reference point process engineers reach for whenever a line has to survive an aggressive chemical duty.</p>
+      </div>
+      <div class="principle-panel">
+        <span class="ghost-num">02</span>
+        <span class="eyebrow">Mission</span>
+        <h3>Engineer failure out of the process line.</h3>
+        <p>To manufacture fluoropolymer lined components that are dimensionally precise, chemically inert and independently pressure &amp; spark tested — every time.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="section-head reveal"><span class="eyebrow">Core Values</span><h2>What guides our engineering</h2></div>
+    <div class="feature-grid reveal">
+      <div class="feature-card">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="12" cy="12" r="8" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="3.5" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="1" fill="currentColor"/></svg></div>
+        <div class="num">01</div>
+        <h3>Precision</h3>
+        <p>Every dimension checked against approved drawings and documented tolerances.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 3l7 3.5v6c0 4.5-3 7.5-7 8.5-4-1-7-4-7-8.5v-6L12 3z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg></div>
+        <div class="num">02</div>
+        <h3>Integrity</h3>
+        <p>We only publish specifications we can substantiate — and mark the rest "available on request."</p>
+      </div>
+      <div class="feature-card">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="num">03</div>
+        <h3>Reliability</h3>
+        <p>100% tested finished products, not sample-based sign-off.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 6h16M4 6l2 13h12l2-13M9.5 10v6M14.5 10v6" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="num">04</div>
+        <h3>Responsiveness</h3>
+        <p>A dedicated engineering team to support isometric drawings and fitting lists.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 7h10M4 12h16M4 17h7" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><circle cx="16.5" cy="7" r="2" stroke="currentColor" stroke-width="1.6"/><circle cx="9" cy="17" r="2" stroke="currentColor" stroke-width="1.6"/></svg></div>
+        <div class="num">05</div>
+        <h3>Customisation</h3>
+        <p>Special fabricated designs built to your process, not the other way round.</p>
+      </div>
+      <div class="feature-card">
+        <div class="fic"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12a8 8 0 0114-5.3M20 12a8 8 0 01-14 5.3" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M18 3v4h-4M6 21v-4h4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+        <div class="num">06</div>
+        <h3>Continuity</h3>
+        <p>Consistent lining process and material traceability, batch to batch.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-light">
+  <div class="container">
+    <div class="split reverse reveal">
+      <div class="split-copy">
+        <span class="eyebrow">Manufacturing Infrastructure</span>
+        <h2>Full in-house lining capability.</h2>
+        <p>Our facility covers computerised design and CAD, product machining, liner extrusion and injection, pipe/fitting fabrication, and a dedicated quality testing department — the complete chain from raw fluoropolymer to finished lined component.</p>
+        <a href="manufacturing.html" class="btn-ghost" style="margin-top:8px;display:inline-flex;">See the manufacturing process</a>
+      </div>
+      <div class="split-media"><img src="assets/factory.jpeg" alt="Manufacturing facility"/></div>
+    </div>
+
+    <div class="standards-strip reveal" style="margin-top:56px;">
+      <div class="st-copy">
+        <h3>Every component leaves the line tested, not just inspected.</h3>
+        <p>Pressure and spark tested to independently verify liner integrity before a single part ships.</p>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;">
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>ASTM F1545 Compliant</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>Pressure &amp; Spark Tested</span>
+        <span class="badge"><svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 12l5 5L20 6" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>100% Finished-Product Tested</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section section-dark">
+  <div class="container">
+    <div class="final-cta reveal">
+      <h2>Want to know more about how we work?</h2>
+      <p>Our engineering team is happy to walk through your requirement.</p>
+      <div class="actions"><a href="contact.html" class="btn btn-primary">Request a Quote</a></div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a href="index.html" class="logo"><img class="mark" src="assets/logo.png" alt="Antico Flow System logo"/><span>Antico Flow System<span class="sub">Fluoropolymer Lined Flow Solutions</span></span></a>
+        <p class="footer-tag">Engineered for corrosion. Trusted for performance. Fluoropolymer-lined flow systems for demanding process industries.</p>
+      </div>
+      <div class="footer-col">
+        <h5>Products</h5>
+        <a href="products.html?category=pipes-fittings">Pipes & Fittings</a>
+<a href="products.html?category=valves">Valves</a>
+<a href="products.html?category=bellows">Expansion Bellows</a>
+<a href="products.html?category=sight-flow-indicators">Sight Flow Indicators</a>
+<a href="products.html?category=special-products">Special Design Products</a>
+      </div>
+      <div class="footer-col">
+        <h5>Company</h5>
+        <a href="about.html">About</a>
+        <a href="manufacturing.html">Manufacturing</a>
+        <a href="quality.html">Quality</a>
+        <a href="industries.html">Industries</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <div class="footer-col">
+        <h5>Get In Touch</h5>
+        <a href="tel:+919601176639">+91 96011 76639</a>
+        <a href="mailto:sales@anticoflow.com">sales@anticoflow.com</a>
+        <a href="contact.html">Request a Quote</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 Antico Flow System. All rights reserved.</span>
+      <span>Privacy Policy &nbsp;·&nbsp; Terms &amp; Conditions</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/app.js"></script>
+
+<script>
+/* ===== About page motion enhancement ===== */
+(function(){
+  const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const items = document.querySelectorAll(
+    '.section-light .split, .stat-band-grid, .section-head, .principles-grid, ' +
+    '.feature-grid, .section-light .split.reverse, .standards-strip, .final-cta'
+  );
+
+  if(!items.length) return;
+
+  if(reduce){
+    items.forEach(el => {
+      el.classList.remove('about-motion-hidden','about-motion-visible');
+    });
+    return;
+  }
+
+  items.forEach(el => {
+    el.classList.add('about-motion-hidden');
+  });
+
+  if(!('IntersectionObserver' in window)){
+    items.forEach(el => {
+      el.classList.remove('about-motion-hidden');
+      el.classList.add('about-motion-visible');
+    });
+    return;
+  }
+
+  const io = new IntersectionObserver((entries, observer)=>{
+    entries.forEach(entry=>{
+      if(!entry.isIntersecting) return;
+      entry.target.classList.remove('about-motion-hidden');
+      entry.target.classList.add('about-motion-visible');
+      observer.unobserve(entry.target);
+    });
+  },{
+    threshold:.08,
+    rootMargin:'0px 0px -30px 0px'
+  });
+
+  items.forEach(el=>io.observe(el));
+
+  /* Safety fallback: never leave content hidden if the observer is blocked. */
+  setTimeout(()=>{
+    items.forEach(el=>{
+      el.classList.remove('about-motion-hidden');
+      el.classList.add('about-motion-visible');
+    });
+  }, 2500);
+})();</script>
+
+</body>
+</html>
